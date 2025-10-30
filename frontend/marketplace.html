@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplace - BizMate SA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>BizMate Marketplace</h1><button onclick="window.location.href='dashboard.html'">Dashboard</button></header>
+
+<div class="container">
+  <h3>SME Marketplace</h3>
+  <p>Share your products/services with other SMEs.</p>
+
+  <input type="text" id="marketplaceTitle" placeholder="Product/Service Name">
+  <input type="text" id="marketplacePrice" placeholder="Price (R)">
+  <button onclick="postMarketplace()">Post</button>
+
+  <h4>Marketplace Listings</h4>
+  <ul id="marketplaceList"></ul>
+</div>
+
+<script src="frontend.js"></script>
+</body>
+</html>
+
+Frontend JS for Marketplace
+
+async function postMarketplace(){
+  const title = document.getElementById('marketplaceTitle').value;
+  const price = document.getElementById('marketplacePrice').value;
+  const headers = {'Authorization':token,'Content-Type':'application/json'};
+  // Simulate POST
+  alert(`Posted ${title} for R${price} (Simulated)`);
+  loadMarketplace();
+}
+
+function loadMarketplace(){
+  const list = document.getElementById('marketplaceList');
+  list.innerHTML='';
+  // Simulate data
+  const items = [
+    {title:'Web Design',price:500},
+    {title:'Cleaning Service',price:250}
+  ];
+  items.forEach(i=>{
+    const li=document.createElement('li');
+    li.innerText=`${i.title} - R${i.price}`;
+    list.appendChild(li);
+  });
+}
+loadMarketplace();

@@ -1,0 +1,33 @@
+{
+    "name": "bizmate-sa",
+    "version": "1.0.0",
+    "description": "BizMate SA - All in-one SME management app",
+    "main": "beckend/server.js",
+    "scripts": {
+        "start": "node beckend/server.js",
+        "dev": "nodemon beckend/server.js",
+        "seed": "node ./scripts/seeds.js"
+    },
+    "keywords": [
+        "SME",
+        "invoice",
+        "expenses",
+        "dashboard",
+        "AI",
+        "website",
+        "marketplace"
+    ],
+    "author": "Thabani Mdluli",
+    "license": "MIT",
+    "dependencies": {
+        "bcrypt" :"^5.1.0",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "express":"^4.18.2",
+        "jsonwebtoken":"^9.0.0",
+        "sqlite3": "^5.1.6"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}

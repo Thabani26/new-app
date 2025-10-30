@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Builder - BizMate SA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Website Builder</h1><button onclick="window.location.href='dashboard.html'">Dashboard</button></header>
+
+<div class="container">
+  <h3>Build Your Website / Online Store</h3>
+  <p>Drag and drop components to create your SME website.</p>
+
+  <div class="flex-wrap">
+    <div class="card">
+      <h4>Add Section</h4>
+      <button onclick="addSection('text')">Text</button>
+      <button onclick="addSection('image')">Image</button>
+      <button onclick="addSection('product')">Product</button>
+    </div>
+  </div>
+
+  <div id="websiteCanvas" style="min-height:300px; border:1px solid #ccc; margin-top:1rem; padding:1rem;"></div>
+  <button onclick="saveWebsite()">Save Website</button>
+</div>
+
+<script src="frontend.js"></script>
+</body>
+</html>
+
+Frontend JS for Website Builder
+
+// Website Builder
+function addSection(type){
+  const canvas = document.getElementById('websiteCanvas');
+  let div = document.createElement('div');
+  div.className='card';
+  if(type==='text') div.innerHTML='Editable Text Section';
+  if(type==='image') div.innerHTML='[Image Placeholder]';
+  if(type==='product') div.innerHTML='[Product Placeholder]';
+  canvas.appendChild(div);
+}
+
+function saveWebsite(){
+  alert('Website saved! (Simulated)');
+  // Call backend API here to save website JSON
+}
