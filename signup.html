@@ -27,17 +27,19 @@ function signup() {
     return;
   }
 
-  // For now, just log the values to test
-  console.log('Name:', name);
-  console.log('Email:', email);
-  console.log('Password:', password);
+  // Save the user info in localStorage
+  localStorage.setItem('name', name);
+  localStorage.setItem('email', email);
+  localStorage.setItem('password', password);
 
-  alert('Sign Up successful (demo)!');
+  alert('Sign Up successful! You can now login.');
 
-  // Clear inputs
+  // Clear form
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
   document.getElementById('password').value = '';
+}
+
 }
 
 document.getElementById('signupBtn').addEventListener('click', signup);
@@ -45,4 +47,5 @@ document.getElementById('signupBtn').addEventListener('click', signup);
 
 </body>
 </html>
+
 
