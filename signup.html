@@ -15,9 +15,34 @@
   <button id="signupBtn">Sign Up</button>
   <p>Already have an account? <a href="login.html">Login</a></p>
 </div>
+
 <script src="frontend.js"></script>
 <script>
+function signup() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  if (!name || !email || !password) {
+    alert('Please fill all fields.');
+    return;
+  }
+
+  // For now, just log the values to test
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Password:', password);
+
+  alert('Sign Up successful (demo)!');
+
+  // Clear inputs
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('password').value = '';
+}
+
 document.getElementById('signupBtn').addEventListener('click', signup);
 </script>
+
 </body>
 </html>
