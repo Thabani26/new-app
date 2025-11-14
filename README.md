@@ -43,3 +43,4 @@ After seeding, start the server and login with the demo credentials.
 - `frontend/index.html` - included Chart.js and `frontend.js`.
 - `frontend/frontend.js` - fixed previewInvoice bugs.
 - `.gitignore`, `README.md` added.
+
