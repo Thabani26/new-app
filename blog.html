@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - BizMate SA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>BizMate Blog</h1><button onclick="window.location.href='dashboard.html'">Dashboard</button></header>
+
+<div class="container">
+  <h3>Create Blog Post</h3>
+  <input type="text" id="blogTitle" placeholder="Post Title">
+  <textarea id="blogContent" placeholder="Post Content"></textarea>
+  <button onclick="postBlog()">Post</button>
+
+  <h4>Latest Posts</h4>
+  <ul id="blogList"></ul>
+</div>
+
+<script src="frontend.js"></script>
+</body>
+</html>
+
