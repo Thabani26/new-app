@@ -14,9 +14,27 @@
   <button id="loginBtn">Login</button>
   <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
 </div>
-<script src="frontend.js"></script>
+
 <script>
+function login() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Get saved user from localStorage
+  const savedEmail = localStorage.getItem('email');
+  const savedPassword = localStorage.getItem('password');
+
+  if (email === savedEmail && password === savedPassword) {
+    alert('Login successful! Welcome back.');
+    // Redirect to dashboard or main page if needed
+    // window.location.href = 'dashboard.html';
+  } else {
+    alert('Invalid email or password.');
+  }
+}
+
 document.getElementById('loginBtn').addEventListener('click', login);
 </script>
+
 </body>
 </html>
